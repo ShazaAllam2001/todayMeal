@@ -84,6 +84,7 @@ dependencies {
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.lifecycle.viewmodel)
+    implementation(libs.landscapist.coil)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.gson)

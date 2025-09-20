@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TodayMeal</string>
+    <string name="recipes">Recipes</string>
+    <string name="converter">Converter</string>
+    <string name="analyze">Analyze</string>
+    <string name="favorites">Favorites</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="app_desc">Discover, create, and share your favorite recipes with a community of food lovers.</string>
+    <string name="today_s_meal">" Today's Meal"</string>
+    <string name="welcome_to">Welcome to</string>
 </resources>
