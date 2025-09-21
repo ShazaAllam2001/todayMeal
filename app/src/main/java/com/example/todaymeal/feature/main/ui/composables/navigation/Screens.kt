@@ -5,7 +5,7 @@ enum class Screens(
     val parameter: String
 ) {
     RecipeDetails(
-        route = "recipe",
+        route = "recipe/{recipeId}",
         parameter = "recipeId"
     )
 }

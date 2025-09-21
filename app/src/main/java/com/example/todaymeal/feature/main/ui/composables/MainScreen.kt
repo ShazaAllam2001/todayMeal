@@ -62,7 +62,10 @@ fun BottomBar(navController: NavHostController) {
             BottomBarTabs.entries.forEach { screen ->
                 NavigationBarItem(
                     label = {
-                        Text(stringResource(screen.title))
+                        Text(
+                            text = stringResource(screen.title),
+                            style = MaterialTheme.typography.titleSmall
+                        )
                     },
                     icon = {
                         Icon(
@@ -71,8 +74,8 @@ fun BottomBar(navController: NavHostController) {
                         )
                     },
                     colors = NavigationBarItemDefaults.colors(
-                        selectedIconColor = MaterialTheme.colorScheme.secondary,
-                        unselectedIconColor = MaterialTheme.colorScheme.primary
+                        selectedIconColor = MaterialTheme.colorScheme.primary,
+                        unselectedIconColor = MaterialTheme.colorScheme.secondary
                     ),
                     selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                     onClick = {

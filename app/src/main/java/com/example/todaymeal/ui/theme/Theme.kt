@@ -23,16 +23,20 @@ val MaterialTheme.dimens: Dimensions
 
 private val DarkColorScheme = darkColorScheme(
     primary = Green,
+    onPrimary = Black,
     secondary = White,
-    background = Black
-    /*tertiary = Pink80*/
+    background = Black,
+    tertiaryContainer = LightGreen,
+    onTertiary = Black
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Green,
+    onPrimary = Black,
     secondary = Black,
-    background = White
-    /*tertiary = Pink40*/
+    background = White,
+    tertiaryContainer = LightGreen,
+    onTertiary = Black
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

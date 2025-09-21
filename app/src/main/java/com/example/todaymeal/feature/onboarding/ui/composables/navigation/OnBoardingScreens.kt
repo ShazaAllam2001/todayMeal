@@ -5,5 +5,6 @@ enum class OnBoardingScreens(
 ) {
     Welcome(route = "welcome"),
     Features(route = "features"),
-    Preferences(route = "preferences")
+    Preferences(route = "preferences"),
+    Main(route = "main")
 }

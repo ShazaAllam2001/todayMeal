@@ -9,4 +9,12 @@
     <string name="app_desc">Discover, create, and share your favorite recipes with a community of food lovers.</string>
     <string name="today_s_meal">" Today's Meal"</string>
     <string name="welcome_to">Welcome to</string>
+    <string name="app_features">Discover, Create, and Save Culinary Delights</string>
+    <string name="app_features_desc">Explore a world of recipes, analyze your meals, and convert units effortlessly.</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="personalize_desc">Tell us a bit about yourself so we can tailor your experience</string>
+    <string name="personalize_your_experience">Personalize your experience</string>
+    <string name="dietary_preferences">Dietary Preferences</string>
+    <string name="cuisine_preferences">Cuisine Preferences</string>
 </resources>

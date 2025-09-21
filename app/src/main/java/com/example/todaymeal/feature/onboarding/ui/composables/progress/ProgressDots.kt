@@ -1,4 +1,4 @@
-package com.example.todaymeal.feature.onboarding.ui.composables
+package com.example.todaymeal.feature.onboarding.ui.composables.progress
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,7 +20,7 @@ fun ProgressDots(
     selectedIndex: Int
 ) {
     Row(
-        modifier = Modifier.padding(MaterialTheme.dimens.paddingSmall),
+        modifier = Modifier.padding(MaterialTheme.dimens.paddingMedium),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {

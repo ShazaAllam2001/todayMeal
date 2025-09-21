@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonColors
@@ -23,7 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import com.example.todaymeal.feature.onboarding.ui.composables.SkipOnboarding
 import com.example.todaymeal.R
-import com.example.todaymeal.feature.onboarding.ui.composables.ProgressDots
+import com.example.todaymeal.feature.onboarding.ui.composables.progress.ProgressDots
 import com.example.todaymeal.feature.onboarding.ui.composables.navigation.OnBoardingScreens
 import com.example.todaymeal.ui.theme.dimens
 
@@ -32,11 +33,12 @@ fun OnBoarding1(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(MaterialTheme.dimens.paddingMedium)
+            .systemBarsPadding()
+            .padding(horizontal = MaterialTheme.dimens.paddingMedium)
             .background(MaterialTheme.colorScheme.background),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        SkipOnboarding()
+        SkipOnboarding(navController = navController)
         Image(
             modifier = Modifier.clip(CircleShape),
             painter = painterResource(R.drawable.onboarding1),
@@ -46,25 +48,25 @@ fun OnBoarding1(navController: NavHostController) {
         Column(
             modifier = Modifier.padding(
                 horizontal = MaterialTheme.dimens.paddingSmall,
-                vertical = MaterialTheme.dimens.paddingMedium
+                vertical = MaterialTheme.dimens.paddingExtraLarge
             ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = stringResource(R.string.welcome_to),
                 style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.primary
+                color = MaterialTheme.colorScheme.secondary
             )
             Text(
                 text = stringResource(R.string.today_s_meal),
-                color = MaterialTheme.colorScheme.secondary,
-                style = MaterialTheme.typography.labelLarge
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.primary
             )
             Spacer(modifier = Modifier.height(MaterialTheme.dimens.paddingMedium))
             Text(
                 text = stringResource(R.string.app_desc),
-                color = MaterialTheme.colorScheme.secondary,
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.secondary
             )
         }
         ElevatedButton(
@@ -72,9 +74,9 @@ fun OnBoarding1(navController: NavHostController) {
             onClick = { navController.navigate(OnBoardingScreens.Features.route) },
             colors = ButtonColors(
                 containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = MaterialTheme.colorScheme.secondary,
+                contentColor = MaterialTheme.colorScheme.onPrimary,
                 disabledContainerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f),
-                disabledContentColor = MaterialTheme.colorScheme.onSecondary.copy(alpha = 0.3f)
+                disabledContentColor = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.3f)
             ),
             shape = RoundedCornerShape(MaterialTheme.dimens.roundCorner)
         ) {

@@ -1,0 +1,31 @@
+package com.example.todaymeal.feature.personalize.data
+
+enum class Cuisine {
+    African,
+    Asian,
+    American,
+    British,
+    Cajun,
+    Caribbean,
+    Chinese,
+    EasternEuropean,
+    European,
+    French,
+    German,
+    Greek,
+    Indian,
+    Irish,
+    Italian,
+    Japanese,
+    Jewish,
+    Korean,
+    LatinAmerican,
+    Mediterranean,
+    Mexican,
+    MiddleEastern,
+    Nordic,
+    Southern,
+    Spanish,
+    Thai,
+    Vietnamese
+}

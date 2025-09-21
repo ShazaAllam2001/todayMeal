@@ -9,17 +9,23 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
 import com.example.todaymeal.R
+import com.example.todaymeal.feature.onboarding.ui.composables.navigation.OnBoardingScreens
 
 @Composable
-fun SkipOnboarding() {
+fun SkipOnboarding(navController: NavHostController) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.End
     ) {
         TextButton(
             onClick = {
-
+                navController.navigate(OnBoardingScreens.Main.route)  {
+                    popUpTo(navController.graph.findStartDestination().id)
+                    launchSingleTop = true
+                }
             }
         ) {
             Text(

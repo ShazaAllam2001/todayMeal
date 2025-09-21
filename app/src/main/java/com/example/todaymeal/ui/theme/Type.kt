@@ -13,6 +13,13 @@ val Epilogue_Italic = FontFamily(Font(R.font.epilogue_italic_variablefont_wght))
 
 // Set of Material typography styles to start with
 val Typography = Typography(
+    bodySmall = TextStyle(
+        fontFamily = Epilogue,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 14.sp,
+        letterSpacing = 0.5.sp
+    ),
     bodyMedium = TextStyle(
         fontFamily = Epilogue,
         fontWeight = FontWeight.Normal,
@@ -27,6 +34,13 @@ val Typography = Typography(
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),*/
+    titleSmall = TextStyle(
+        fontFamily = Epilogue,
+        fontWeight = FontWeight.Normal,
+        fontSize = 11.sp,
+        lineHeight = 18.sp,
+        letterSpacing = 0.5.sp
+    ),
     labelSmall = TextStyle(
         fontFamily = Epilogue,
         fontWeight = FontWeight.Normal,
@@ -37,7 +51,7 @@ val Typography = Typography(
     labelMedium = TextStyle(
         fontFamily = Epilogue,
         fontWeight = FontWeight.Normal,
-        fontSize = 28.sp,
+        fontSize = 22.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
@@ -45,7 +59,7 @@ val Typography = Typography(
         fontFamily = Epilogue,
         fontWeight = FontWeight.W800,
         fontSize = 32.sp,
-        lineHeight = 24.sp,
+        lineHeight = 32.sp,
         letterSpacing = 0.5.sp
     )
 )
