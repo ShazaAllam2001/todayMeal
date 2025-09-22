@@ -12,7 +12,11 @@ data class Dimensions(
 
     val borderWidth: Dp = 1.dp,
     val roundCorner: Dp = 10.dp,
+    //
+    val circleBtn: Dp = 96.dp,
+    // Progress Dots
     val circleDot: Dp = 18.dp,
+    // Progress Dashes
     val thinBarWidth: Dp = 48.dp,
     val thinBarHeight: Dp = 16.dp,
     val thinBarCorner: Dp = 10.dp

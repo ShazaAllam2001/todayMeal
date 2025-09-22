@@ -17,4 +17,9 @@
     <string name="personalize_your_experience">Personalize your experience</string>
     <string name="dietary_preferences">Dietary Preferences</string>
     <string name="cuisine_preferences">Cuisine Preferences</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="result">Result</string>
+    <string name="amount">Amount</string>
 </resources>

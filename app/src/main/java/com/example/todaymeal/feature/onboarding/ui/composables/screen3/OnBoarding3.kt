@@ -16,20 +16,28 @@ import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavHostController
 import com.example.todaymeal.R
 import com.example.todaymeal.feature.onboarding.ui.composables.progress.ProgressDashes
 import com.example.todaymeal.feature.onboarding.ui.composables.SkipOnboarding
 import com.example.todaymeal.feature.onboarding.ui.composables.navigation.OnBoardingScreens
-import com.example.todaymeal.feature.personalize.data.Cuisine
-import com.example.todaymeal.feature.personalize.data.Dietary
+import com.example.todaymeal.feature.personalize.data.constants.Cuisine
+import com.example.todaymeal.feature.personalize.data.constants.Dietary
 import com.example.todaymeal.ui.theme.dimens
 
 @Composable
 fun OnBoarding3(navController: NavHostController) {
+    val dietary = Dietary.entries.map { it.name }
+    val cuisine = Cuisine.entries.map { it.name }
+    val dietaryCheckedStates = remember { mutableStateListOf(*Array(dietary.size) { false }) }
+    val cuisineCheckedStates = remember { mutableStateListOf(*Array(cuisine.size) { false }) }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -46,6 +54,7 @@ fun OnBoarding3(navController: NavHostController) {
             Text(
                 text = stringResource(R.string.personalize_your_experience),
                 style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.secondary
             )
             Text(
@@ -57,21 +66,25 @@ fun OnBoarding3(navController: NavHostController) {
             Text(
                 text = stringResource(R.string.dietary_preferences),
                 style = MaterialTheme.typography.labelSmall,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.secondary
             )
             CheckListGrid(
                 modifier = Modifier.weight(0.3f),
-                items = Dietary.entries.map { it.name }
+                checkedStates = dietaryCheckedStates,
+                items = dietary
             )
             Spacer(modifier = Modifier.height(MaterialTheme.dimens.paddingMedium))
             Text(
                 text = stringResource(R.string.cuisine_preferences),
                 style = MaterialTheme.typography.labelSmall,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.secondary
             )
             CheckListGrid(
                 modifier = Modifier.weight(0.3f),
-                items = Cuisine.entries.map { it.name }
+                checkedStates = cuisineCheckedStates,
+                items = cuisine
             )
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -82,9 +95,9 @@ fun OnBoarding3(navController: NavHostController) {
                     onClick = { navController.navigate(OnBoardingScreens.Features.route) },
                     colors = ButtonColors(
                         containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                        contentColor = MaterialTheme.colorScheme.onTertiary,
+                        contentColor = MaterialTheme.colorScheme.onTertiaryContainer,
                         disabledContainerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.5f),
-                        disabledContentColor = MaterialTheme.colorScheme.onTertiary.copy(alpha = 0.3f)
+                        disabledContentColor = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.3f)
                     ),
                     shape = RoundedCornerShape(MaterialTheme.dimens.roundCorner)
                 ) {

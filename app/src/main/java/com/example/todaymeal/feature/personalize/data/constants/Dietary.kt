@@ -1,4 +1,4 @@
-package com.example.todaymeal.feature.personalize.data
+package com.example.todaymeal.feature.personalize.data.constants
 
 enum class Dietary {
     GlutenFree,

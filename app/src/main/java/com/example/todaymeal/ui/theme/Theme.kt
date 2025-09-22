@@ -1,6 +1,5 @@
 package com.example.todaymeal.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -25,18 +24,22 @@ private val DarkColorScheme = darkColorScheme(
     primary = Green,
     onPrimary = Black,
     secondary = White,
-    background = Black,
+    tertiary = Gray,
+    onTertiary = Black,
     tertiaryContainer = LightGreen,
-    onTertiary = Black
+    onTertiaryContainer = Black,
+    background = Black,
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Green,
     onPrimary = Black,
     secondary = Black,
-    background = White,
+    tertiary = Gray,
+    onTertiary = White,
     tertiaryContainer = LightGreen,
-    onTertiary = Black
+    onTertiaryContainer = Black,
+    background = White,
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
